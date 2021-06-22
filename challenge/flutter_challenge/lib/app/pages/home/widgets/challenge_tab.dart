@@ -30,14 +30,6 @@ You should meet these criteria:
                   TextSpan(
                     text: '''
 • Display your cards on the "Result" tab.
-• Install yarn and run ''',
-                  ),
-                  TextSpan(
-                    text: '''"yarn & yarn start"''',
-                    style: Theme.of(context).textTheme.subtitle1,
-                  ),
-                  TextSpan(
-                    text: ''' in the root repo directory.
 • Write a GraphQL query to get a list of products and their data. The GraphQL service is running at''',
                   ),
                   TextSpan(
@@ -46,10 +38,10 @@ You should meet these criteria:
                   ),
                   TextSpan(
                     text: '''
-and can be explored with the GraphiQL UI at that route. The Apollo client already points to that URL, so you'll just need to grab the data to display in the new component.
+and can be explored with the GraphiQL UI at that route. The GraphQLClient in this project already points to that URL, so you'll just need to grab the necessary data using valid query syntax.
 • Style the products to match the design mockup in the image below.
 • List the products in a grid layout with two columns.
-• Navigate to a product details page when you click each product card. There is no mockup for this page and so can be creative, but keep the aesthetic close to the mockup.
+• Navigate to a product details page when you click each product card. There is no mockup for this page so you can be creative, but keep the aesthetic close to the mockup.
 • The new page should display at least the description, effects, and type data. Note that these aren't displayed on the grid card.
 • Add a back arrow or some other icon to return back to the home page when clicked.
 ''',
@@ -68,6 +60,18 @@ and can be explored with the GraphiQL UI at that route. The Apollo client alread
                   TextSpan(
                     text: '''data. Note that these aren't displayed on the list card.
 • When the user clicks the new view, it should return you to the product list.''',
+                  ),
+                  TextSpan(
+                    text: '''
+
+
+EXTRA CREDIT ''',
+                    style: Theme.of(context).textTheme.subtitle1,
+                  ),
+                  TextSpan(
+                    text: '''
+
+• Extend the functionality of your submission considering the existing functionality of dutchie.com and state management. You may use the existing GetX library or any other state management library you are familiar with (i.e. BLOC)''',
                   ),
                 ],
               ),

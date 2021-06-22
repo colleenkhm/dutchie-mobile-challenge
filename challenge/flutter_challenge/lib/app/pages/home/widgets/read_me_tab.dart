@@ -19,13 +19,15 @@ The following libraries are included in this project, you'll probably want to us
               TextSpan(
                 text: '''
 • GetX
-• Apollo GraphQL
+• GraphQL Flutter
+• Flutter SVG
+• Pedantic
 
 ''',
                 style: Theme.of(context).textTheme.subtitle1,
               ),
               TextSpan(text: '''
-Take a look at the pubspec.yaml file to see any other packages installed that might help you out, and add whatever you need to get the challenge done. Feel free to look up anything you need to complete the tasks.
+Take a look at the pubspec.yaml file to see any assets that might help you out, and add whatever you need to get the challenge done. Feel free to look up anything you need to complete the tasks.
 
 We take pride in the polish of our product at dutchie both in the UI functionality and design, so we'd like to see the same from our candidates.
 

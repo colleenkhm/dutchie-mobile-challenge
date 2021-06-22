@@ -1,18 +1,34 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_challenge/app/pages/home/home_page.dart';
 import 'package:flutter_challenge/app/theme/app_theme.dart';
-import 'package:get/route_manager.dart';
+import 'package:get/get.dart';
+import 'package:graphql_flutter/graphql_flutter.dart';
 
 class App extends StatelessWidget {
+  final GraphQLClient client = Get.put(
+    GraphQLClient(
+      link: HttpLink('http://127.0.0.1:5000/graphql'),
+      cache: GraphQLCache(
+        store: HiveStore(),
+      ),
+    ),
+  );
+
   @override
-  Widget build(BuildContext context) => GetMaterialApp(
-        title: 'Flutter Demo',
-        theme: AppTheme.themeData,
-        home: HomePage(),
-        debugShowCheckedModeBanner: false,
+  Widget build(BuildContext context) => GraphQLProvider(
+        client: ValueNotifier<GraphQLClient>(client),
+        child: GetMaterialApp(
+          title: 'Flutter Challenge',
+          theme: AppTheme.themeData,
+          home: HomePage(),
+          debugShowCheckedModeBanner: false,
+        ),
       );
 }
 
-void main() {
+void main() async {
+  await initHiveForFlutter();
+
   runApp(App());
 }
