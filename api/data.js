@@ -7,7 +7,8 @@ module.exports = {
       Options: ['0.1g'],
       type: 'Edible',
       strainType: 'Sativa',
-      Image: 'https://images.dutchie.com/519e2ac68c3968e4b20d9910e3b473aa?auto=format&dpr=2&bg=FFFFFF&crop=faces&fit=crop&max-h=291&max-w=409&min-h=291&min-w=409&ixlib=react-7.2.0',
+      Image:
+        'https://images.dutchie.com/519e2ac68c3968e4b20d9910e3b473aa?auto=format&dpr=2&bg=FFFFFF&crop=faces&fit=crop&max-h=291&max-w=409&min-h=291&min-w=409&ixlib=react-7.2.0',
       Prices: [20],
       Status: 'Active',
       flavors: ['chocolate'],
@@ -45,7 +46,8 @@ module.exports = {
         Relaxed: 6,
         'Pain-Relief': 5,
       },
-      Image: 'https://images.dutchie.com/e9da65afc7bcf48c3f9c6bcdd69d024d?auto=format&dpr=2&bg=FFFFFF&crop=faces&fit=crop&max-h=291&max-w=409&min-h=291&min-w=409&ixlib=react-7.2.0',
+      Image:
+        'https://images.dutchie.com/e9da65afc7bcf48c3f9c6bcdd69d024d?auto=format&dpr=2&bg=FFFFFF&crop=faces&fit=crop&max-h=291&max-w=409&min-h=291&min-w=409&ixlib=react-7.2.0',
       Name: 'Purefectionery | Eclipse Gummies',
       Options: ['Purefectionery | Eclipse Gummies'],
       Prices: [18],

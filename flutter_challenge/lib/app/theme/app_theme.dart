@@ -13,7 +13,9 @@ class AppTheme {
       );
 
   static ThemeData get themeData => ThemeData(
-        primaryColor: primaryGreen,
+        colorScheme: ThemeData().colorScheme.copyWith(
+              primary: primaryGreen,
+            ),
         textTheme: TextTheme(
           bodyText1: TextStyle(
             fontWeight: FontWeight.w400,

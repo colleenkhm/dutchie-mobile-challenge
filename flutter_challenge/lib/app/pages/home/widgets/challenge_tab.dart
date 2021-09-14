@@ -37,24 +37,7 @@ and can be explored with the GraphiQL UI at that route. The GraphQLClient in thi
 • Navigate to a product details page when you click each product card. There is no mockup for this page so you can be creative, but keep the aesthetic close to the mockup.
 • The new page should display at least the description, effects, and type data. Note that these aren't displayed on the grid card.
 • Add a back arrow or some other icon to return back to the home page when clicked.
-''',
-                  ),
-                  TextSpan(
-                    text: ''' description, effects, ''',
-                    style: Theme.of(context).textTheme.bodyText2,
-                  ),
-                  TextSpan(
-                    text: '''and''',
-                  ),
-                  TextSpan(
-                    text: ''' type ''',
-                    style: Theme.of(context).textTheme.bodyText2,
-                  ),
-                  TextSpan(
-                    text: '''
-
-• Extend the functionality of your submission in a creative way using
-
+• Extend the functionality of your submission in a creative way.
 ''',
                   ),
                 ],

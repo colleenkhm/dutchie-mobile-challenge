@@ -3,7 +3,6 @@ import 'package:flutter_challenge/app/pages/home/widgets/challenge_tab.dart';
 import 'package:flutter_challenge/app/pages/home/widgets/read_me_tab.dart';
 import 'package:flutter_challenge/app/pages/home/widgets/result_tab.dart';
 import 'package:flutter_challenge/app/widgets/nav_bar.dart';
-import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -50,7 +49,7 @@ class _HomePageState extends State<HomePage> {
           title: Text(title),
         ),
         body: Container(
-          height: Get.height,
+          height: MediaQuery.of(context).size.height,
           child: PageView(
             controller: _pageController,
             children: <Widget>[
