@@ -5,8 +5,10 @@ import 'package:flutter_challenge/app/pages/home/widgets/result_tab.dart';
 import 'package:flutter_challenge/app/widgets/nav_bar.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
@@ -45,23 +47,17 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: Container(
-          height: MediaQuery.of(context).size.height,
-          child: PageView(
-            controller: _pageController,
-            children: <Widget>[
-              ReadMeTab(),
-              ChallengeTab(),
-              ResultTab(),
-            ],
-          ),
-        ),
-        bottomNavigationBar: NavBar(
-          activeIndex: _activeTabIndex,
-          onTapTabCallback: onTapTab,
-        ),
-      );
+    appBar: AppBar(title: Text(title)),
+    body: SizedBox(
+      height: MediaQuery.of(context).size.height,
+      child: PageView(
+        controller: _pageController,
+        children: <Widget>[ReadMeTab(), ChallengeTab(), ResultTab()],
+      ),
+    ),
+    bottomNavigationBar: NavBar(
+      activeIndex: _activeTabIndex,
+      onTapTabCallback: onTapTab,
+    ),
+  );
 }

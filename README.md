@@ -6,9 +6,8 @@ This challenge is composed of a small backend in the `/api` directory and the fr
 
 The api is a simple endpoint written in JavaScript to provide a small dataset using GraphQL. To run the api:
 
-- Install [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
 - cd into `/api`
-- run the command `yarn && yarn start`
+- run the command `npm && npm run start`
 - You should see "Listening on port 5000!" in the terminal and the GraphiQL UI should be accessible at http://localhost:5000/graphql.
 
 ### Flutter App

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ResultTab extends StatelessWidget {
-  ResultTab({Key? key}) : super(key: key);
+  const ResultTab({super.key});
 
   @override
-  Widget build(BuildContext context) => Center(
-        child: Text('Add Product Grid Here!'),
-      );
+  Widget build(BuildContext context) =>
+      Center(child: Text('Add Product Grid Here!'));
 }

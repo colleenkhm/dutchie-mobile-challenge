@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
 
 class ChallengeTab extends StatelessWidget {
-  const ChallengeTab({Key? key}) : super(key: key);
+  const ChallengeTab({super.key});
 
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
-        padding: EdgeInsets.all(20),
-        child: Column(
-          children: <Widget>[
-            Text.rich(
+    padding: .all(20),
+    child: Column(
+      children: <Widget>[
+        Text.rich(
+          TextSpan(
+            style: Theme.of(context).textTheme.bodyLarge,
+            children: <InlineSpan>[
               TextSpan(
-                style: Theme.of(context).textTheme.bodyText1,
-                children: <InlineSpan>[
-                  TextSpan(
-                    text: '''
+                text: '''
 Display a grid of product cards, and add a product details page that is navigated to when you click each card.
 
 You should meet these criteria:
 
 ''',
-                  ),
-                  TextSpan(
-                    text: '''
+              ),
+              TextSpan(
+                text: '''
 • Display your cards on the "Result" tab.
 • Write a GraphQL query to get a list of products and their data. The GraphQL service is running at''',
-                  ),
-                  TextSpan(
-                    text: ''' https://localhost:5000 ''',
-                    style: Theme.of(context).textTheme.bodyText2,
-                  ),
-                  TextSpan(
-                    text: '''
+              ),
+              TextSpan(
+                text: ''' https://localhost:5000 ''',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              TextSpan(
+                text: '''
 and can be explored with the GraphiQL UI at that route. The GraphQLClient in this project already points to that URL, so you'll just need to grab the necessary data using valid query syntax.
 • Style the products to match the design mockup in the image below.
 • List the products in a grid layout with two columns.
@@ -39,15 +39,12 @@ and can be explored with the GraphiQL UI at that route. The GraphQLClient in thi
 • Add a back arrow or some other icon to return back to the home page when clicked.
 • Extend the functionality of your submission in a creative way.
 ''',
-                  ),
-                ],
               ),
-            ),
-            Image.asset(
-              'lib/assets/images/product_card.png',
-              width: 150,
-            ),
-          ],
+            ],
+          ),
         ),
-      );
+        Image.asset('lib/assets/images/product_card.png', width: 150),
+      ],
+    ),
+  );
 }
