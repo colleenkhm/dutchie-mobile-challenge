@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'playlist_store.dart';
 
 class PlaylistPage extends StatelessWidget {
-  const PlaylistPage({super.key});
+ PlaylistPage({super.key, required this.playlistStore});
+
+  final PlaylistStore playlistStore;
 
   @override
   Widget build(BuildContext context) {

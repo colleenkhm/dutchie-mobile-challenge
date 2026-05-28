@@ -4,6 +4,11 @@ import 'albums/albums_page.dart';
 import 'artists/artists_page.dart';
 import 'data/api_client.dart';
 import 'playlist/playlist_page.dart';
+import 'data/album_repository.dart';
+import 'playlist/playlist_store.dart';
+import 'data/album_notifier.dart';
+
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -47,17 +52,30 @@ class MusicShell extends StatefulWidget {
 class _MusicShellState extends State<MusicShell> {
   int _index = 0;
 
+  late  AlbumNotifier _albumNotifier;
+  late PlaylistStore _playlistStore; 
+
   @override
   void initState() {
     super.initState();
+    _playlistStore = PlaylistStore();
+    _albumNotifier = AlbumNotifier(repository: AlbumRepository(client: widget.client),);
+    _albumNotifier.loadAlbums();
   }
 
   @override
+  void dispose() {
+    _albumNotifier.dispose();
+    _playlistStore.dispose();
+    super.dispose();
+  }
+ 
+  @override
   Widget build(BuildContext context) {
     final pages = [
-      const AlbumsPage(),
+      AlbumsPage(albumNotifier: _albumNotifier),
       const ArtistsPage(),
-      const PlaylistPage(),
+      PlaylistPage(playlistStore: _playlistStore),
     ];
 
     return Scaffold(
