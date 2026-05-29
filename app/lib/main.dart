@@ -73,7 +73,7 @@ class _MusicShellState extends State<MusicShell> {
   @override
   Widget build(BuildContext context) {
     final pages = [
-      AlbumsPage(albumNotifier: _albumNotifier),
+      AlbumsPage(albumNotifier: _albumNotifier, playlistStore: _playlistStore),
       const ArtistsPage(),
       PlaylistPage(playlistStore: _playlistStore),
     ];

@@ -7,4 +7,9 @@ class Playlist {
    final String name;
    final List<Song> songs;
   
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'name': name,
+    'songs': songs.map((s) => s.toJson()).toList(),
+  };
 }

@@ -10,4 +10,10 @@ class Song {
   : id = json['id'] as String,
   title = json['title'] as String,
   durationMs = json['durationMs'] as int;
+
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'title': title,
+    'durationMs': durationMs
+  };
 }
